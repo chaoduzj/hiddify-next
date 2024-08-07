@@ -16,6 +16,9 @@ class SingboxConfigOption with _$SingboxConfigOption {
 
   @JsonSerializable(fieldRename: FieldRename.kebab)
   const factory SingboxConfigOption({
+    required String region,
+    required bool blockAds,
+    required bool useXrayCoreWhenPossible,
     required bool executeConfigAsIs,
     required LogLevel logLevel,
     required bool resolveDestination,
@@ -42,8 +45,8 @@ class SingboxConfigOption with _$SingboxConfigOption {
     required bool enableFakeDns,
     required bool enableDnsRouting,
     required bool independentDnsCache,
-    required String geoipPath,
-    required String geositePath,
+    // required String geoipPath,
+    // required String geositePath,
     required List<SingboxRule> rules,
     required SingboxMuxOption mux,
     required SingboxTlsTricks tlsTricks,
@@ -72,7 +75,9 @@ class SingboxWarpOption with _$SingboxWarpOption {
     required String cleanIp,
     required int cleanPort,
     @OptionalRangeJsonConverter() required OptionalRange noise,
+    @OptionalRangeJsonConverter() required OptionalRange noiseSize,
     @OptionalRangeJsonConverter() required OptionalRange noiseDelay,
+    @OptionalRangeJsonConverter() required String noiseMode,
   }) = _SingboxWarpOption;
 
   factory SingboxWarpOption.fromJson(Map<String, dynamic> json) => _$SingboxWarpOptionFromJson(json);

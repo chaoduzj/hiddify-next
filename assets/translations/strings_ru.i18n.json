@@ -78,6 +78,8 @@
         "permissionRequest": "Права на использование камеры для считывания QR"
       },
       "manually": "Ввести вручную",
+      "addWarp": "Добавить WARP",
+      "addingWarpMsg": "Пожалуйста, подождите, пока мы зарегистрируем WARP.",
       "addingProfileMsg": "Добавление профиля",
       "failureMsg": "Не удалось добавить профиль"
     },
@@ -162,6 +164,8 @@
     "requiresRestartMsg": "Чтобы применить изменения, перезапустите приложение.",
     "experimental": "Экспериментальный",
     "experimentalMsg": "Функции с флагом «Экспериментально» все еще находятся в разработке и могут вызвать проблемы.",
+    "exportOptions": "Копировать анонимные параметры в буфер обмена",
+    "exportAllOptions": "Скопировать все параметры в буфер обмена",
     "importOptions": "Импорт параметров из буфера обмена",
     "importOptionsMsg": "Это перезапишет все параметры конфига предоставленными значениями. Вы уверены?",
     "general": {
@@ -174,6 +178,8 @@
         "cn": "Китай (cn)",
         "ru": "Россия (ru)",
         "af": "Afghanistan (af)",
+        "id": "Индонезия (id)",
+        "tr": "Турция (тр) 🇹🇷",
         "other": "Другой"
       },
       "themeMode": "Оформление",
@@ -191,6 +197,7 @@
       "ignoreBatteryOptimizations": "Отключить оптимизацию батареи",
       "ignoreBatteryOptimizationsMsg": "Отключение ограничений для оптимальной производительности VPN.",
       "dynamicNotification": "Отображение скорости в уведомлении",
+      "hapticFeedback": "Тактильная обратная связь",
       "autoIpCheck": "Автоматически проверять IP-адрес соединения"
     },
     "advanced": {
@@ -353,9 +360,10 @@
     },
     "generateWarpConfig": "Cгенерировать WARP конфиг",
     "missingWarpConfig": "Отсутствует WARP конфиг",
-    "warpConfigGenerated": "WARP конфиг сгенерирован",
+    "warpConfigGenerated": "Создана конфигурация WARP",
     "pageTitle": "Параметры конфигурации",
     "logLevel": "Подробность журналирования",
+    "blockAds": "Блокировать рекламу",
     "resolveDestination": "Определять назначение",
     "ipv6Mode": "Маршрутизация IPv6",
     "ipv6Modes": {
@@ -373,7 +381,7 @@
     "localDnsPort": "Локальный порт DNS",
     "allowConnectionFromLan": "Allow Connection from LAN",
     "tunImplementation": "Реализация TUN",
-    "mtu": "MTU",
+    "mtu": "Размер пакета (MTU)",
     "connectionTestUrl": "URL проверки подключения",
     "urlTestInterval": "Интервал проверки URL",
     "enableClashApi": "Использовать Clash API",
@@ -404,6 +412,9 @@
     "warpLicenseKey": "License Key",
     "warpCleanIp": "Clean IP",
     "warpPort": "Port",
-    "warpNoise": "Noise"
+    "warpNoise": "Noise",
+    "warpNoiseSize": "Размер шума",
+    "warpNoiseMode": "Шумовой режим",
+    "warpNoiseDelay": "Задержка шума"
   }
 }

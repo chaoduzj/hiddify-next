@@ -4,8 +4,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:hiddify/core/localization/translations.dart';
 import 'package:hiddify/core/model/optional_range.dart';
+import 'package:hiddify/core/model/region.dart';
 import 'package:hiddify/core/notification/in_app_notification_controller.dart';
-import 'package:hiddify/core/preferences/general_preferences.dart';
 import 'package:hiddify/core/widget/adaptive_icon.dart';
 import 'package:hiddify/core/widget/tip_card.dart';
 import 'package:hiddify/features/common/confirmation_dialogs.dart';
@@ -138,8 +138,22 @@ class ConfigOptionsPage extends HookConsumerWidget {
                     title: t.config.logLevel,
                     presentChoice: (value) => value.name.toUpperCase(),
                   ),
+
                   const SettingsDivider(),
                   SettingsSection(t.config.section.route),
+                  ChoicePreferenceWidget(
+                    selected: ref.watch(ConfigOptions.region),
+                    preferences: ref.watch(ConfigOptions.region.notifier),
+                    choices: Region.values,
+                    title: t.settings.general.region,
+                    presentChoice: (value) => value.present(t),
+                    onChanged: (val) => ref.watch(ConfigOptions.directDnsAddress.notifier).reset(),
+                  ),
+                  SwitchListTile(
+                    title: Text(experimental(t.config.blockAds)),
+                    value: ref.watch(ConfigOptions.blockAds),
+                    onChanged: ref.watch(ConfigOptions.blockAds.notifier).update,
+                  ),
                   SwitchListTile(
                     title: Text(experimental(t.config.bypassLan)),
                     value: ref.watch(ConfigOptions.bypassLan),
@@ -343,6 +357,13 @@ class ConfigOptionsPage extends HookConsumerWidget {
                     validateInput: isPort,
                     digitsOnly: true,
                     inputToValue: int.tryParse,
+                  ),
+                  
+                  SwitchListTile(
+                    title: Text(experimental(t.config.useXrayCoreWhenPossible.Label)),
+                    subtitle: Text(t.config.useXrayCoreWhenPossible.Description),
+                    value: ref.watch(ConfigOptions.useXrayCoreWhenPossible),
+                    onChanged: ref.watch(ConfigOptions.useXrayCoreWhenPossible.notifier).update,
                   ),
                   const Gap(24),
                 ],

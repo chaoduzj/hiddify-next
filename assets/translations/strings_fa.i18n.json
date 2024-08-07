@@ -78,7 +78,7 @@
         "permissionRequest": "دسترسی به دوربین برای اسکن کد QR"
       },
       "manually": "افزودن دستی",
-      "addWarp": "افزودن وارپ",
+      "addWarp": "افزودن WARP",
       "addingWarpMsg": "لطفا صبر کنید تا وارپ ثبت شود",
       "addingProfileMsg": "در حال افزودن پروفایل",
       "failureMsg": "افزودن پروفایل ناموفق بود"
@@ -174,10 +174,12 @@
       "region": "منطقه",
       "regionMsg": "به انتخاب تنظیمات پیش‌فرض برای دور زدن آدرس‌های داخلی کمک می‌کند",
       "regions": {
-        "ir": "ایران (ir)",
-        "cn": "چین (cn)",
-        "ru": "روسیه (ru)",
-        "af": "افغانستان (af)",
+        "ir": "ایران (ir) 🇮🇷",
+        "cn": "چین (cn) 🇨🇳",
+        "ru": "روسیه (ru) 🇷🇺",
+        "af": "افغانستان (af) 🇦🇫",
+        "id": "إندونيسيا (id) 🇮🇩",
+        "tr": "ترکیه (tr) 🇹🇷",
         "other": "سایر"
       },
       "themeMode": "حالت پوسته",
@@ -322,9 +324,13 @@
     "experimentalNotice": "ویژگی‌های آزمایشی در حال استفاده",
     "experimentalNoticeMsg": "شما برخی از ویژگی‌های آزمایشی را فعال کرده‌اید که ممکن است بر کیفیت اتصال تأثیر گذاشته و باعث بروز خطاهای غیرمنتظره شود. شما همیشه می‌توانید این گزینه‌ها را از صفحه‌ی تنظیمات پیکربندی تغییر دهید یا بازنشانی کنید.",
     "disableExperimentalNotice": "دیگر نشان نده",
-    "reconnectMsg": "دوباره متصل شوید تا تغییرات اعمال شوند"
+    "reconnectMsg": "در حال اتصال مجدد برای اعمال تغییرات..."
   },
   "config": {
+    "useXrayCoreWhenPossible": {
+      "Label": "استفاده از Xray-core در صورت ممکن",
+      "Description": "برای استفاده از Xray-core باید دوباره لینک ساب را وارد کنید تا این گزینه فعال شود."
+    },
     "resetBtn": "بازنشانی تنظیمات",
     "serviceMode": "حالت سرویس",
     "quickSettings": "تنظیمات سریع",
@@ -361,6 +367,7 @@
     "warpConfigGenerated": "پیکربندی WARP ایجاد شد",
     "pageTitle": "تنظیمات پیکربندی",
     "logLevel": "سطح گزارش",
+    "blockAds": "مسدود سازی تبلیغات",
     "resolveDestination": "جایگذاری مقصد",
     "ipv6Mode": "مسیریابی IPv6",
     "ipv6Modes": {
@@ -378,7 +385,7 @@
     "localDnsPort": "پورت DNS داخلی",
     "allowConnectionFromLan": "اشتراک VPN در شبکه داخلی",
     "tunImplementation": "پیاده‌سازی TUN",
-    "mtu": "سایز بسته‌ها (MTU) ",
+    "mtu": "سایز بسته‌ (MTU) ",
     "connectionTestUrl": "لینک بررسی اتصال",
     "urlTestInterval": "فاصله‌ی زمانی بررسی لینک",
     "enableClashApi": "فعال‌سازی Clash API",
@@ -410,6 +417,8 @@
     "warpCleanIp": "آی‌پی تمیز",
     "warpPort": "پورت",
     "warpNoise": "تعداد نویز",
+    "warpNoiseSize": "اندازه نویز",
+    "warpNoiseMode": "حالت نویز",
     "warpNoiseDelay": "تأخیر نویز"
   }
 }
